@@ -53,7 +53,164 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+// variable testing
+@testvariable: white;
+
+// mixin testing
+.some-class {
+    color: red;
+    font-size: 14px;
 }
 
+.example-mixin {
+    text-align: center;
+    .some-class();
+}
+
+html, body {
+	height: 100%;
+	// font-size: 62.5%;
+	margin: 0 auto;
+	width: 880px;
+
+	// @media only screen and (max-width: 600px) (max-width: 500px) {
+	// 	width: 500px;
+	// }
+}
+
+h1 {
+	font-size: 60px;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+h6 {
+	font-size: 26px;
+	margin-top: 5px;
+}
+
+p {
+	font-size: 20px;
+}
+
+th {
+	font-size: 20px;
+}
+
+td {
+	font-size: 20px;
+}
+
+.top-nav {
+	display: flex;
+	justify-content: flex-end;
+
+	a {
+		margin-left: 20px;
+		margin-top: 20px;
+		text-decoration: none;
+		color: black;
+	}
+}
+
+.top-content-area {
+	// border: 1px solid black;
+	background: seashell;
+	height: 63%;
+	width: 100%;
+	margin-top: 20px;
+
+	div {
+		margin-top: 50px;
+		margin-left: 20px;
+
+		h6 {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		p {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		button {
+			padding: 10px 20px;
+			background: gray;
+			color: white;
+			font-size: 20px;
+			border-radius: 5px;
+		}
+	}
+
+}
+
+.top-image {
+	margin-top: 40px;
+	max-width: 50%
+}
+
+.middle-section {
+	margin-top: 20px;
+	// border: 1px solid black;
+	display: flex;
+
+	.middle-div-1 {
+		max-width: 50%;
+	}
+
+	.middle-div-2 {
+		margin-left: 130px;
+
+		p {
+			border: 1px solid black;
+			padding: 10px 15px;
+		}
+	}
+}
+
+.bottom-section {
+	// border: 1px solid red;
+	margin-top: 30px;
+
+	h2 {
+		margin-bottom: 10px;
+	}
+
+	th {
+		font-weight: bold;
+		line-height: 40px;
+		border-top: 1px solid black;
+	}
+
+	td {
+		text-align: center;
+		line-height: 40px;
+	}
+}
+
+footer {
+	margin-top: 20px;
+	border: 1px solid black;
+	color: @testvariable;
+	background: gray;
+	padding-top: 20px;
+	padding-bottom: 40px;
+
+	p {
+		text-align: center;
+	}
+}
+
+.test-color {
+	border-top: 1px solid black;
+	background: tan;
+}
+
+// @media(max-width: 500px) {
+// 	html, body {
+// 		width: 500px;
+// 	}
+// }
